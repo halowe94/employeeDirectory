@@ -20,3 +20,4 @@ function EmployeeTable() {
     )
 }
 
+export default Table; 

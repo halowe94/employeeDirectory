@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <EmployeeContext.Provider value={{employees, setEmployees, visibleEmployees, setVisibleEmployees}}></EmployeeContext.Provider>
+      <Navbar />
     </div>
   );
 }
