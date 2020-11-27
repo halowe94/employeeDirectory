@@ -9,7 +9,12 @@ export function useGet(url) {
     //useEffect function
     useEffect(() => {
         async function getEmployees() {
+            //try catch for getEmployees
             try {
+                //create response variable for axios call
+                const response = await axios.get(url)
+                setEmployees(response.data.results)
+                setVisibleEMployees(response.data.results)
 
             } catch (error) {
                 console.log("error with API:", error)
