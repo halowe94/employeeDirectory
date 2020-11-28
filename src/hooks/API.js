@@ -37,5 +37,9 @@ export function useGet(url) {
         }
     }
     //end sortFunc
+
+    //sort by first name
+
+    //sort by age
 }
 //end useGet function
