@@ -3,6 +3,7 @@ import { EmployeeContext } from './EmployeeContext'
 import Button from './Button'
 import {useGet} from '../hooks/API';
 
+//begin employee table function
 function EmployeeTable() {
 
     const [url] = useState()
@@ -39,5 +40,6 @@ function EmployeeTable() {
 
     )
 };
+//end employee table function
 
 export default EmployeeTable; 
