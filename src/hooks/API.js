@@ -23,7 +23,19 @@ export function useGet(url) {
         //call getEmployees function
         getEmployees()
 
-    })
+    }, [])
     //end useEffect function
+
+    //begin sortFunc
+    function sortFunc(sort) {
+        switch(sort) {
+            case "name": sortByName()
+            break
+            case "age": sortByAge()
+            break
+            default: console.log("Does not match name or age")
+        }
+    }
+    //end sortFunc
 }
 //end useGet function
