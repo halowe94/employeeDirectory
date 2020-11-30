@@ -53,5 +53,13 @@ export function useGet(url) {
     }
 
     //sort by age
+    function sortByAge(){
+        employees.sort(function(a,b){
+            return (a.dob.age - b.dob.age)
+        })
+        setVisibleEmployees([...employees])
+    }
+
+    return {visibleEmployees, sortFunc}
 }
 //end useGet function
