@@ -6,7 +6,7 @@ import {useGet} from '../hooks/API';
 //begin employee table function
 function EmployeeTable() {
 
-    const [url] = useState()
+    const [url] = useState("https://randomuser.me/api/?results=10")
     const { sortFunc } = useGet(url)
     const { visibleEmployees } = useContext(EmployeeContext)
 
@@ -14,9 +14,8 @@ function EmployeeTable() {
         <table>
             <thead>
                 <tr>
-                    <td onClick={() => sortFunc('age')}><Button>First Name</Button></td>
+                    <td onClick={() => sortFunc('name')}><Button>First Name</Button></td>
                     <td>Last Name</td>
-                    <td>UID</td>
                     <td>Gender</td>
                     <td>E-mail</td>
                     <td onClick={() => sortFunc('age')}><Button>Age</Button></td>
