@@ -1,20 +1,20 @@
 import React, {useState} from 'react';
 
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import Navbar from "./components/NavBar";
+import NavBar from "./components/NavBar";
 import EmployeeTable from "./components/EmployeeTable";
 
 import { EmployeeContext } from "./components/EmployeeContext";
 
 function App() {
-  const [employees, setEmployees] = usetState([])
+  const [employees, setEmployees] = useState([])
   const [visibleEmployees, setVisibleEmployees] = useState([])
 
   return (
     <div className="App">
       <EmployeeContext.Provider value={{employees, setEmployees, visibleEmployees, setVisibleEmployees}}>
-      <Navbar />
+      <NavBar />
       <EmployeeTable />
       </EmployeeContext.Provider>
     </div>

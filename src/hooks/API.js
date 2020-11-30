@@ -1,10 +1,10 @@
 import {useEffect, useContext} from 'react';
-import {EmployeeContext} from "../components/EmployeeContext"
-import axios from 'axios'
+import {EmployeeContext} from "../components/EmployeeContext";
+import axios from 'axios';
 
 //useGet function
 export function useGet(url) {
-    const {employees, setEmployees, visibleEmployees, setVisibleEmployees}  = use(EmployeeContext)
+    const {employees, setEmployees, visibleEmployees, setVisibleEmployees}  = useContext(EmployeeContext)
 
     //useEffect function
     useEffect(() => {
@@ -14,7 +14,7 @@ export function useGet(url) {
                 //create response variable for axios call
                 const response = await axios.get(url)
                 setEmployees(response.data.results)
-                setVisibleEMployees(response.data.results)
+                setVisibleEmployees(response.data.results)
 
             } catch (error) {
                 console.log("error with API:", error)
