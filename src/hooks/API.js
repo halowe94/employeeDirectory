@@ -4,7 +4,7 @@ import axios from 'axios'
 
 //useGet function
 export function useGet(url) {
-    const {employees, setEmployees, visibleEmployees, setVisibleEMployees}  = use(EmployeeContext)
+    const {employees, setEmployees, visibleEmployees, setVisibleEmployees}  = use(EmployeeContext)
 
     //useEffect function
     useEffect(() => {
@@ -39,6 +39,18 @@ export function useGet(url) {
     //end sortFunc
 
     //sort by first name
+    function sortByName() {
+        employees.sort(function(a,b) {
+            if(a.name.first < b.name.first) {
+                return -1;
+            } else {
+                return 1;
+            }
+        })
+        //spread operator to create new variable
+        setVisibleEmployees([...employees])
+
+    }
 
     //sort by age
 }
