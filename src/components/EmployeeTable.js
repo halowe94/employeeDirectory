@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { EmployeeContext } from "./EmployeeContext";
 import Button from "./Button";
 import { useGet } from "../hooks/API";
+import "./EmployeeTable.css";
 
 //begin employee table function
 function EmployeeTable() {
@@ -31,16 +32,18 @@ function EmployeeTable() {
   return (
     <>
       <input name="searchInput" onChange={handleChange} />
-      <table className="mx-auto">
-        <thead>
+      <table className="mx-auto" id="table">
+        <thead id="thead">
           <tr>
             <td onClick={() => sortFunc("name")}>
+              <p>CLICK TO SORT</p>
               <Button>First Name</Button>
             </td>
             <td>Last Name</td>
             <td>Gender</td>
             <td>E-mail</td>
             <td onClick={() => sortFunc("age")}>
+              <p>CLICK TO SORT</p>
               <Button>Age</Button>
             </td>
           </tr>

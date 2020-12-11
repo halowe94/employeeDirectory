@@ -1,0 +1,20 @@
+#thead {
+  background: rgb(88, 201, 197);
+}
+
+#table {
+  margin-top: 40px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border: solid rgb(57, 57, 57) !important;
+}
+
+td {
+  border-bottom: solid rgb(88, 74, 74) !important;
+  border-right: solid rgb(152, 152, 152) !important;
+}
+
+p {
+  padding: 10px;
+  font-weight: 25;
+}
