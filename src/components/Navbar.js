@@ -6,7 +6,7 @@ function NavBar() {
     <nav className="navbar navbar-expand-lg navbar-light bg-primary">
       <h2>React Employee Directory</h2>
       <div>
-        <h3>Search By First Name:</h3>
+        <h3>Search By First Name (case sensitive):</h3>
         {/* Search bar here */}
       </div>
     </nav>
